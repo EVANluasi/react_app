@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Calendar from './components/Calendar';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gray-100">
+      <div className="max-w-4xl mx-auto py-10 px-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
+          Kalender Expert by Evan
+        </h1>
+        <Calendar />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

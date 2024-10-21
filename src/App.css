@@ -1,38 +1,140 @@
+/* src/App.css */
+
+/* Pusatkan semua konten di aplikasi */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Tambahan untuk heading, beri jarak bawah untuk elemen di bawahnya */
+h4 {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Gaya tema terang */
+.bg-light {
+  background-color: #ffffff;
+  color: #333333; /* Sesuaikan warna teks agar lebih kontras */
+}
+
+/* Gaya tema gelap */
+.bg-dark {
+  background-color: #131212;
+  color: #f5f5f5; /* Ubah warna teks agar lebih jelas di tema gelap */
+}
+
+/* Gaya dialog untuk tema terang */
+.dialog-content {
+  background-color: #f0f0f0;
+}
+
+.dialog-title {
+  color: #333333;
+}
+
+/* Tambahan gaya untuk dialog tema gelap */
+.dialog-dark .dialog-content {
+  background-color: #444444;
+}
+
+.dialog-dark .dialog-title {
+  color: #f5f5f5; /* Sesuaikan warna teks agar lebih kontras */
+}
+
+/* Gaya responsif untuk tampilan mobile */
+@media (max-width: 600px) {
+  /* Judul toolbar di kalender */
+  .fc-toolbar-title {
+    font-size: 1.2rem; /* Sesuaikan ukuran font di layar kecil */
+  }
+
+  /* Ukuran font untuk tombol toolbar di kalender */
+  .fc-toolbar button {
+    font-size: 0.8rem; /* Kecilkan font untuk tombol di layar kecil */
+  }
+
+  /* Ukuran font untuk judul di dialog */
+  .dialog-title {
+    font-size: 1.2rem; /* Sesuaikan ukuran judul dialog di layar kecil */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Gaya tombol umum */
+button {
+  transition: background-color 0.3s ease-in-out; /* Transisi halus untuk perubahan warna */
+  padding: 8px 12px; /* Padding untuk tombol */
+  border-radius: 5px; /* Sudut melengkung */
+  border: none; /* Hilangkan border default */
+  background-color: #4A90E2; /* Warna latar tombol default */
+  color: white; /* Warna teks tombol */
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #357ABD; /* Ubah warna tombol saat hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Gaya untuk acara di kalender */
+.fc-event {
+  border-radius: 5px; /* Sudut melengkung untuk acara */
+  padding: 4px 8px; /* Padding untuk acara */
+  background-color: #4A90E2; /* Warna latar acara default */
+  color: white; /* Warna teks acara */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Efek hover untuk acara di kalender */
+.fc-event:hover {
+  transform: scale(1.05); /* Efek memperbesar sedikit */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Tambah bayangan */
+}
+
+/* Gaya sel di kalender */
+.fc-daygrid-day {
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover efek untuk sel di kalender */
+.fc-daygrid-day:hover {
+  background-color: #f0f0f0; /* Warna latar belakang saat hover */
+}
+
+/* Gaya untuk hari saat ini */
+.fc-day-today {
+  background-color: #FFEB3B; /* Warna kuning untuk hari ini */
+  color: black; /* Warna teks kontras */
+}
+
+/* Dark mode untuk hari saat ini */
+.dark .fc-day-today {
+  background-color: #FFCA28; /* Warna kuning sedikit lebih gelap untuk dark mode */
+  color: black;
+}
+
+/* Gaya border pada elemen dialog */
+.dialog-content {
+  border-radius: 8px; /* Tambahkan border-radius untuk dialog */
+}
+
+.dialog-dark .dialog-content {
+  border-radius: 8px;
+}
+
+/* Global transition untuk smooth mode switching */
+body {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Gaya tambahan untuk tampilan kecil */
+@media (max-width: 400px) {
+  h4 {
+    font-size: 1rem; /* Kecilkan ukuran heading di layar yang sangat kecil */
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    padding: 6px 10px; /* Kurangi padding untuk tombol */
+    font-size: 0.9rem; /* Sesuaikan ukuran font di tombol */
+  }
+
+  .fc-toolbar-title {
+    font-size: 1rem;
   }
 }
